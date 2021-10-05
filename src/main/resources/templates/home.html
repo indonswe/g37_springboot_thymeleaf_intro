@@ -7,11 +7,14 @@
 <body>
 
     <h1 th:text="${message}">HELLO WORLD - FROM THYMELEAF</h1>
+    <br>
+    <h1 th:utext="${message}">HELLO WORLD - FROM THYMELEAF</h1>
 
     <form th:action="@{/}" method="get" >
 
         <label for="message">Message for Display:</label>
         <input type="text" id="message" name="message" placeholder="add a message here...">
+        <input type="submit" value="submit">
 
     </form>
 
