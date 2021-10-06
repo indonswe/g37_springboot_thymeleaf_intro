@@ -6,6 +6,8 @@
 </head>
 <body>
 
+    <div th:replace="/fragments/fragments :: navigation-bar"></div>
+
     <h1 th:text="${message}">HELLO WORLD - FROM THYMELEAF</h1>
     <br>
     <h1 th:utext="${message}">HELLO WORLD - FROM THYMELEAF</h1>
@@ -18,9 +20,7 @@
 
     </form>
 
-
-
-
+    <div th:replace="/fragments/fragments :: footer"></div>
 
 </body>
 </html>

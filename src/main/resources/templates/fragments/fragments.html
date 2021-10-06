@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Collection of Fragments</title>
+</head>
+<body>
+
+<nav th:fragment="navigation-bar">
+    <ul>
+        <li>
+            <a href="#" th:href="@{/home}">Home</a>
+        </li>
+        <li>
+            <a href="#" th:href="@{/about}">About</a>
+        </li>
+        <li>
+            <a href="#" th:href="@{/products}">Products</a>
+        </li>
+        <li>
+            <a href="#" th:href="@{/products/add}">Create Product</a>
+        </li>
+    </ul>
+</nav>
+
+
+<footer th:fragment="footer">
+    <p>Lexicon AB &#169;</p>
+</footer>
+
+
+
+
+
+</body>
+</html>
