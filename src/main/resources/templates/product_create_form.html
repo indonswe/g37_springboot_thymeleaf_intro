@@ -2,21 +2,38 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/bootstrap-5.0.2-dist/css/bootstrap.css}">
     <title>Title</title>
 </head>
 <body>
 
-    <form th:action="@{/products/add/process}" method="post" th:object="${product}" >
-        <label for="productName">Product Name: </label>
-        <input type="text" name="productName" id="productName" placeholder="Enter product name...">
-        <br>
-        <label for="price">Price: </label>
-        <input type="number" name="price" id="price" step="0.01" value="0" placeholder="Enter price here...">
+    <div th:replace="/fragments/fragments :: navigation-bar"></div>
 
-        <input type="submit" value="Create!">
-    </form>
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <form th:action="@{/products/add/process}" method="post" th:object="${product}" class="col-6 my-5" >
+
+                <label for="productName" class="form-label">Product Name: </label>
+                <input type="text" name="productName" id="productName" placeholder="Enter product name..." class="form-control">
+
+                <label for="price" class="form-label">Price: </label>
+                <input type="number" name="price" id="price" step="0.01" value="0" placeholder="Enter price here..." class="form-control">
+
+                <input type="submit" value="Create!" class="btn btn-primary mt-3">
+
+            </form>
+
+        </div>
 
 
+    </div>
+
+
+
+
+    <div th:replace="/fragments/fragments :: footer"></div>
 
 
 </body>

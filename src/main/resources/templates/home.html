@@ -2,7 +2,9 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/bootstrap-5.0.2-dist/css/bootstrap.css}">
+
+        <title>Home</title>
 </head>
 <body>
 
@@ -16,7 +18,7 @@
 
         <label for="message">Message for Display:</label>
         <input type="text" id="message" name="message" placeholder="add a message here...">
-        <input type="submit" value="submit">
+        <input type="submit" value="submit" class="btn btn-primary">
 
     </form>
 

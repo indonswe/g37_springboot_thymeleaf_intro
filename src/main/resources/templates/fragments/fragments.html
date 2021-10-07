@@ -2,30 +2,42 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{/bootstrap-5.0.2-dist/css/bootstrap.css}">
     <title>Collection of Fragments</title>
+
 </head>
 <body>
 
-<nav th:fragment="navigation-bar">
-    <ul>
-        <li>
-            <a href="#" th:href="@{/home}">Home</a>
+<nav th:fragment="navigation-bar" class="navbar navbar-expand bg-light"  >
+<div class="container">
+
+    <a href="#" th:href="@{/}" class="navbar-brand">LogoType</a>
+
+
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="#" th:href="@{/home}">Home</a>
         </li>
-        <li>
-            <a href="#" th:href="@{/about}">About</a>
+        <li class="navbar-nav">
+            <a class="nav-link" href="#" th:href="@{/about}">About</a>
         </li>
-        <li>
-            <a href="#" th:href="@{/products}">Products</a>
+        <li class="navbar-nav">
+            <a class="nav-link" href="#" th:href="@{/products}">Products</a>
         </li>
-        <li>
-            <a href="#" th:href="@{/products/add}">Create Product</a>
+        <li class="navbar-nav">
+            <a class="nav-link" href="#" th:href="@{/products/add}">Create Product</a>
         </li>
     </ul>
+</div>
 </nav>
 
 
-<footer th:fragment="footer">
-    <p>Lexicon AB &#169;</p>
+<footer th:fragment="footer" class="footer bg-dark text-white mt-3">
+
+    <div class="container py-3">
+        <p class="m-0 text-center">Lexicon AB &#169;</p>
+    </div>
+
 </footer>
 
 

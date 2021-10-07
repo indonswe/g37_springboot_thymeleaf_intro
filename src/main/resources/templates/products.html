@@ -2,37 +2,43 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+
+    <link rel="stylesheet" th:href="@{/bootstrap-5.0.2-dist/css/bootstrap.css}">
+    <title>Products</title>
 </head>
 <body>
 <div th:replace="/fragments/fragments :: navigation-bar"></div>
 
 
-<table>
-    <thead>
-    <tr>
-        <th>ProductName</th>
-        <th>Price</th>
-        <th>Description</th>
-    </tr>
-    </thead>
+<div class="container">
 
-    <tbody th:if="${#lists.isEmpty(products)}">
-    <tr>
-        <td> No Products Available</td>
-    </tr>
+    <table class="table table-hover my-3">
+        <thead>
+        <tr>
+            <th>ProductName</th>
+            <th>Price</th>
+            <th>Description</th>
+        </tr>
+        </thead>
 
-    </tbody>
-    <tbody th:unless="${#lists.isEmpty(products)}">
-    <tr th:each="product: ${products}">
-        <td th:text="${product.productName}"></td>
-        <td th:text="${product.price}"></td>
-        <td><a th:href="@{/products/{id} (id=${product.id})}">Details</a></td>
-    </tr>
+        <tbody th:if="${#lists.isEmpty(products)}">
+        <tr>
+            <td> No Products Available</td>
+        </tr>
 
-    </tbody>
+        </tbody>
+        <tbody th:unless="${#lists.isEmpty(products)}">
+        <tr th:each="product: ${products}">
+            <td th:text="${product.productName}"></td>
+            <td th:text="${product.price}"></td>
+            <td><a th:href="@{/products/{id} (id=${product.id})}">Details</a></td>
+        </tr>
 
-</table>
+        </tbody>
+
+    </table>
+
+</div>
 
 <div th:replace="/fragments/fragments :: footer"></div>
 
